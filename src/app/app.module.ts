@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { UsuariosComponent } from './usuarios/usuarios.component';
 
 import { FormsModule } from '@angular/forms';
-import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.component'; // <-- NgModel lives here
+import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.component';
+import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    UsuarioDetalleComponent
+    UsuarioDetalleComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Usuario } from '../usuario';
 //importamos el mock(usuarios hard-code list) de USUARIOS
 import { USUARIOSLIST } from '../mock-usuarios';
+import { Subscriber } from 'rxjs';
 
 import { UsuarioService } from '../usuario.service';
 
@@ -37,9 +38,10 @@ export class UsuariosComponent implements OnInit {
   onSelectector(usuario: Usuario): void {
     this.selectedUsuario = usuario;
   }
-  
+
   getUsers(): void {
-    this.usuarioslist_ = this.usuarioService.getUsers();
+    this.usuarioService.getUsers().subscribe(usuarioslist_ => this.usuarioslist_ = usuarioslist_);
+    
   }
 
 }
