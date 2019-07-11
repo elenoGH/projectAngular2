@@ -9,14 +9,16 @@
   </li>
 </ul>
 
+<app-usuario-detalle [usuario]="selectedUsuario"></app-usuario-detalle>
+
+<!--Solo trae un solo usuario-->
+<!--
 <div *ngIf="selectedUsuario">
-  <!--Solo trae un solo usuario-->
   <ul class="usuarioslist_">
     <li>
       <span class="badge">{{selectedUsuario.id}}</span> {{selectedUsuario.name}}
     </li>
   </ul>
-  
   <p>{{selectedUsuario}}  works!</p>
   <h2>{{selectedUsuario.name | uppercase}} Details</h2>
   <div><span>id: </span>{{selectedUsuario.id}}</div>
@@ -27,3 +29,4 @@
       </label>
     </div>
 </div>
+-->
