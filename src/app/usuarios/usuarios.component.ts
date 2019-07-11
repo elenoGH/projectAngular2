@@ -26,7 +26,7 @@ export class UsuariosComponent implements OnInit {
   usuarioslist_: Usuario[];
 
   //agregamos eventos tipo  --event binding syntax.
-  selectedUsuario: Usuario;
+  //selectedUsuario: Usuario;
  
   constructor(private usuarioService: UsuarioService) { }
   
@@ -34,11 +34,11 @@ export class UsuariosComponent implements OnInit {
   ngOnInit() {
     this.getUsers();
   }
-
+/*
   onSelectector(usuario: Usuario): void {
     this.selectedUsuario = usuario;
   }
-
+*/
   getUsers(): void {
     this.usuarioService.getUsers().subscribe(usuarioslist_ => this.usuarioslist_ = usuarioslist_);
     

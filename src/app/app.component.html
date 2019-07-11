@@ -1,3 +1,8 @@
 <h1>{{title}}</h1>
-<app-usuarios></app-usuarios><!--este viene de usuario.components.ts de @Component-->
+<nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    &nbsp;/&nbsp;
+    <a routerLink="/usuarios">Heroes</a>
+</nav>
+<router-outlet></router-outlet><!--The <router-outlet> tells the router where to display routed views.-->
 <app-messages></app-messages>

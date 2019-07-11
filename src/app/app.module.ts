@@ -7,14 +7,16 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 
 import { FormsModule } from '@angular/forms';
 import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.component';
-import { MessagesComponent } from './messages/messages.component'; // <-- NgModel lives here
+import { MessagesComponent } from './messages/messages.component';
+import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
     UsuarioDetalleComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

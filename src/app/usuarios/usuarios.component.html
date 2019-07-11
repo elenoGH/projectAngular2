@@ -2,14 +2,22 @@
 <h2>Mi lista de Usuarios</h2>
 <ul class="usuarioslist_">
   <!--No olvide el asterisco (*) delante de ngFor. Es una parte crítica de la sintaxis.-->
+  <!--
   <li *ngFor="let usuario of usuarioslist_" 
             [class.selected]="usuario === selectedUsuario"
             (click)="onSelectector(usuario)">
     <span class="badge">{{usuario.id}}</span> {{usuario.name}}
   </li>
+-->
+  <li *ngFor="let usuario of usuarioslist_" >
+    <a routerLink="/detalle/{{usuario.id}}">
+      <span class="badge">{{usuario.id}}</span> {{usuario.name}}
+    </a>
+  </li>
+
 </ul>
 
-<app-usuario-detalle [usuario]="selectedUsuario"></app-usuario-detalle>
+<!--<app-usuario-detalle [usuario]="selectedUsuario"></app-usuario-detalle>-->
 
 <!--Solo trae un solo usuario-->
 <!--
