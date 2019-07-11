@@ -1,9 +1,29 @@
-<p>{{usuario}}  works!</p>
-<h2>{{usuario.name | uppercase}} Details</h2>
-<div><span>id: </span>{{usuario.id}}</div>
-<div><span>name: </span>{{usuario.name}}</div>
-<div>
-    <label>name:
-      <input [(ngModel)]="usuario.name" placeholder="name"/>
-    </label>
-  </div>
+<!--Listadol de Usuarios Hardcode-->
+<h2>Mi lista de Usuarios</h2>
+<ul class="usuarioslist_">
+  <!--No olvide el asterisco (*) delante de ngFor. Es una parte crítica de la sintaxis.-->
+  <li *ngFor="let usuario of usuarioslist_" 
+            [class.selected]="usuario === selectedUsuario"
+            (click)="onSelectector(usuario)">
+    <span class="badge">{{usuario.id}}</span> {{usuario.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedUsuario">
+  <!--Solo trae un solo usuario-->
+  <ul class="usuarioslist_">
+    <li>
+      <span class="badge">{{selectedUsuario.id}}</span> {{selectedUsuario.name}}
+    </li>
+  </ul>
+  
+  <p>{{selectedUsuario}}  works!</p>
+  <h2>{{selectedUsuario.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{selectedUsuario.id}}</div>
+  <div><span>name: </span>{{selectedUsuario.name}}</div>
+  <div>
+      <label>name:
+        <input [(ngModel)]="selectedUsuario.name" placeholder="name"/>
+      </label>
+    </div>
+</div>
