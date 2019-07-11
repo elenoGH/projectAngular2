@@ -4,6 +4,8 @@ import { Usuario } from '../usuario';
 //importamos el mock(usuarios hard-code list) de USUARIOS
 import { USUARIOSLIST } from '../mock-usuarios';
 
+import { UsuarioService } from '../usuario.service';
+
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
@@ -19,18 +21,25 @@ export class UsuariosComponent implements OnInit {
   };*/
 
   //traemos la lista de usuarios
-  usuarioslist_ = USUARIOSLIST;
+  //usuarioslist_ = USUARIOSLIST;
+  usuarioslist_: Usuario[];
 
   //agregamos eventos tipo  --event binding syntax.
   selectedUsuario: Usuario;
  
-  constructor() { }
+  constructor(private usuarioService: UsuarioService) { }
+  
 
   ngOnInit() {
+    this.getUsers();
   }
 
   onSelectector(usuario: Usuario): void {
     this.selectedUsuario = usuario;
+  }
+  
+  getUsers(): void {
+    this.usuarioslist_ = this.usuarioService.getUsers();
   }
 
 }
