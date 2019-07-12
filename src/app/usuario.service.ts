@@ -20,4 +20,9 @@ export class UsuarioService {
     return of(USUARIOSLIST);
   }
   
+  //solo traemos un usuario detalle
+  getUsuario(id: number): Observable<Usuario> {
+    this.messageService.add(`UsuarioService: fetched usuario id=${id}`);
+    return of(USUARIOSLIST.find(usuario => usuario.id === id));
+  }
 }

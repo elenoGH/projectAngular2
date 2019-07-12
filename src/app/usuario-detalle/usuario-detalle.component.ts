@@ -1,5 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { UsuarioService }  from '../usuario.service';
+
 import { Usuario } from '../usuario'
 
 @Component({
@@ -11,9 +16,20 @@ export class UsuarioDetalleComponent implements OnInit {
 
   @Input() usuario: Usuario;
   
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private usuarioService: UsuarioService,
+    private location: Location
+  ) { }
 
   ngOnInit() {
+    this.getUsuario();
+  }
+  
+  getUsuario(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.usuarioService.getUsuario(id).subscribe(usuario => this.usuario = usuario);
+    
   }
 
 }
