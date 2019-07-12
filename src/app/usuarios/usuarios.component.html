@@ -1,50 +1,32 @@
-<!--Listadol de Usuarios Hardcode-->
-<h2>Usuarios</h2>
-
-<!--<app-usuario-detalle [usuario]="selectedUsuario"></app-usuario-detalle>-->
-
-<!--Solo trae un solo usuario-->
-<!--
-<div *ngIf="selectedUsuario">
-  <ul class="usuarioslist_">
-    <li>
-      <span class="badge">{{selectedUsuario.id}}</span> {{selectedUsuario.name}}
-    </li>
-  </ul>
-  <p>{{selectedUsuario}}  works!</p>
-  <h2>{{selectedUsuario.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedUsuario.id}}</div>
-  <div><span>name: </span>{{selectedUsuario.name}}</div>
-  <div>
-      <label>name:
-        <input [(ngModel)]="selectedUsuario.name" placeholder="name"/>
-      </label>
-    </div>
-</div>
--->
-
 <table class="table table-hover">
   <thead>
-    <tr>
+    <tr class="text-center">
       <th>ID</th>
       <th>NOMBRE</th>
-      <th>APEIDOS</th>
+      <th>CUENTA BANCARIA</th>
+      <th>SUCURSAL</th>
+      <th>CLAVE CUENTA</th>
+      <th>CORREO</th>
       <th>ACCION</th>
     </tr>
   </thead>
   <tbody>
-          <li  >
-            
-          </li>
     <tr *ngFor="let usuario of usuarioslist_" class="text-center">
-      <td><a routerLink="/detalle/{{usuario.id}}">
-        <span class="badge">{{usuario.id}}</span> {{usuario.id}}
-      </a></td>
-      <td>{{usuario.name}}</td>
-      <td>otro</td>
       <td>
-        <button class="btn btn-warning">Editar</button>
-        <button class="btn btn-danger" style="margin-left: 10px">Delete</button>
+        <span class="badge">{{usuario.id}}</span>
+      </td>
+      <td>{{usuario.name}}&nbsp;{{usuario.secondname}}&nbsp;{{usuario.appat}}&nbsp;{{usuario.apmat}}</td>
+      <td>{{usuario.bancocuenta}}</td>
+      <td>{{usuario.bancosucursal}}</td>
+      <td>{{usuario.bancoclave}}</td>
+      <td>{{usuario.email}}</td>
+      <td>
+          <a routerLink="/detalle/{{usuario.id}}">
+            <span class="badge">VER</span>
+          </a>&nbsp;|&nbsp;
+          <a routerLink="/detalle/{{usuario.id}}">
+            <span class="badge">ENVIAR EMAIL</span>
+          </a>
       </td>
     </tr>
   </tbody>

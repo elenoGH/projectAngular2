@@ -14,7 +14,7 @@ import { Usuario } from '../usuario'
 })
 export class UsuarioDetalleComponent implements OnInit {
 
-  @Input() usuario: Usuario;
+  @Input() userItem: Usuario;
   
   constructor(
     private route: ActivatedRoute,
@@ -28,7 +28,7 @@ export class UsuarioDetalleComponent implements OnInit {
   
   getUsuario(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.usuarioService.getUsuario(id).subscribe(usuario => this.usuario = usuario);
+    this.usuarioService.getUsuario(id).subscribe(userIt => this.userItem = userIt);
     
   }
 

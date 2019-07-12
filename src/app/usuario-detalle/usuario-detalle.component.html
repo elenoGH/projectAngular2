@@ -1,10 +1,17 @@
-<p>usuario-detalle works!</p>
-<div *ngIf="usuario">
-    <h2>{{usuario.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{usuario.id}}</div>
-    <div>
-        <label>name:
-        <input [(ngModel)]="usuario.name" placeholder="name"/>
-        </label>
-    </div>
+<h2>Detalle Usuario</h2>
+<div *ngIf="userItem">
+    <div><span>id: </span>{{userItem.id}}</div>
+    <div><span>Nombre: </span>{{userItem.name}}&nbsp;{{userItem.secondname}}</div>
+    <div><span>Apellidos: </span>{{userItem.appat}}&nbsp;{{userItem.apmat}}</div>
+    <div><span>Edad: </span>{{userItem.edad}}</div>
+    <div><span>Cuanta Bancaria: </span>{{userItem.bancocuenta}}</div>
+    <div><span>Sucuarsal Bancaria: </span>{{userItem.bancosucursal}}</div>
+    <div><span>Clave de Banco: </span>{{userItem.bancoclave}}</div>
+    <div><span>Referencia Bancaria: </span>{{userItem.bancoreferencia}}</div>
+    <div><span>Folio: </span>{{userItem.folio}}</div>
+    <div><span>Casa: </span>{{userItem.casa}}</div>
+    <div><span>Manzana: </span>{{userItem.manzana}}</div>
+    <div><span>Propietario: </span>{{userItem.propietario}}</div>
+    <div><span>Privada: </span>{{userItem.privada}}</div>
+    <div><span>Correo: </span>{{userItem.email}}</div>
 </div>
