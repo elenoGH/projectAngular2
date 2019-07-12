@@ -10,6 +10,14 @@ import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.compo
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
 
+//servicios REST
+import { HttpClientModule }    from '@angular/common/http';
+
+//bootstrap
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +29,11 @@ import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgM
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    BsDropdownModule.forRoot(),
+    TooltipModule.forRoot(),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
