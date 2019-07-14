@@ -24,9 +24,12 @@
           <a routerLink="/detalle/{{usuario.id}}">
             <span class="badge">VER</span>
           </a>&nbsp;|&nbsp;
-          <a routerLink="/detalle/{{usuario.id}}">
+          <!--a routerLink="/detalle/{{usuario.id}}">
             <span class="badge">ENVIAR EMAIL</span>
-          </a>
+          </a-->
+          <button (click)="postThis(usuario.email)">
+              ENVIAR MAIL
+          </button>
       </td>
     </tr>
   </tbody>

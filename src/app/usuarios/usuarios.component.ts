@@ -43,4 +43,27 @@ export class UsuariosComponent implements OnInit {
     this.usuarioService.getUsers().subscribe(usuarioslist_ => this.usuarioslist_ = usuarioslist_);
   }
 
+  /**
+  *las siguientes funciones son para el envio de datos por URL
+  *si no sirve, borra por el momento
+  * ejemplo en: https://www.competa.com/blog/get-and-post-request-angular-4-3/
+  * seguir ejemplo https://www.devglan.com/spring-boot/spring-boot-angular-example
+  * para envo de parametros
+  */
+  
+  /*
+  postRequest(data) {
+    return this.http.post('http://localhost/crud/', data)
+  }
+
+  postThis(data) {
+    this.UsuarioService.postRequest(data)
+        .subscribe(
+            data => console.log(data),
+            error => console.log(error),
+            () => console.log('completed!')
+        )
+  }
+  */
+
 }
