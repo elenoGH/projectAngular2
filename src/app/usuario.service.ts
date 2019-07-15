@@ -52,7 +52,7 @@ export class UsuarioService {
        });
     let options = { headers: headers };
   
-    return this.http.post<Usuario>(`http://localhost/crud/sendMail?correo=${usuario.email}&noacount=${usuario.bancocuenta}&clavebanc=${usuario.bancoclave}&nameuser=${usuario.name}`
+    return this.http.post<Usuario>(`http://localhost/crud/sendMail?name=${usuario.name}&secondname=${usuario.secondname}&appat=${usuario.appat}&apmat=${usuario.apmat}&bancocuenta=${usuario.bancocuenta}&bancosucursal=${usuario.bancosucursal}&bancoclave=${usuario.bancoclave}&bancoreferencia=${usuario.bancoreferencia}&folio=${usuario.folio}&casa=${usuario.casa}&manzana=${usuario.manzana}&propietario=${usuario.propietario}&privada=${usuario.privada}&email=${usuario.email}`
     , usuario, options)
   }
 
