@@ -4,6 +4,9 @@ import { UsuariosComponent }      from './usuarios/listar/usuarios.component';
 import { DashboardComponent }   from './usuarios/dashboard/dashboard.component';
 import { UsuarioDetalleComponent } from './usuarios/usuario-detalle/usuario-detalle.component';
 
+//residente
+import { ListarComponent } from './residentes/listar/listar.component';
+
 //para poder importar estos componentes, es necesario generar un index dentro de la carpeta de
 //donde se requiere importar estos mismos
 import { HomeComponent } from './home';
@@ -15,6 +18,8 @@ const routes: Routes = [
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detalle/:id', component: UsuarioDetalleComponent },
+  //residente
+  { path: 'residente/listar', component: ListarComponent },
   //{ path: '', redirectTo: '/usuarios', pathMatch: 'full' },
   //{ path: '', redirectTo: '/dashboard', pathMatch: 'full' },
 

@@ -20,6 +20,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { ListarComponent } from './residentes/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { RegisterComponent } from './register/register.component';
     DashboardComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    ListarComponent
   ],
   imports: [
     BrowserModule,

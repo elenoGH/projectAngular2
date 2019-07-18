@@ -1,0 +1,29 @@
+<div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="text-center">
+              <th>CLAVE</th>
+              <th>NOMBRE</th>
+              <th>GENERO</th>
+              <th>CLAVE REFERENCIA</th>
+              <th>TELE</th>
+              <th>EMAIL</th>
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let residente of listResidentes" class="text-center">
+              <td>{{residente.rcveresi}}</td>
+              <td>{{residente.rnombrecompleto}}</td>
+              <td>{{residente.rgenero}}</td>
+              <td>{{residente.rcveref.rcveref}}</td>
+              <td>{{residente.rtele}}</td>
+              <td>{{residente.remail}}</td>
+              <td>
+                  <button class="btn btn-warning"
+                  (click)="postThis(residente)">ENVIAR MAIL</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
