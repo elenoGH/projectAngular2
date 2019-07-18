@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 //importamos Clase de usuarios.ts que esta fuera de /app/
-import { Usuario } from '../usuario';
+import { Usuario } from '../modelo/usuario';
 //importamos el mock(usuarios hard-code list) de USUARIOS
-import { USUARIOSLIST } from '../mock-usuarios';
-import { Subscriber } from 'rxjs';
+//import { USUARIOSLIST } from '../mock-usuarios';
+//import { Subscriber } from 'rxjs';
 
-import { UsuarioService } from '../usuario.service';
+import { UsuarioService } from '../../_services/usuario.service';
 
 @Component({
   selector: 'app-usuarios',
@@ -42,7 +42,7 @@ export class UsuariosComponent implements OnInit {
   getUsers(): void {
     this.usuarioService.getUsers().subscribe(usuarioslist_ => this.usuarioslist_ = usuarioslist_);
   }  
-
+/*
   postThis(data) {
     this.usuarioService.postRequest(data)
         .subscribe(
@@ -51,4 +51,5 @@ export class UsuariosComponent implements OnInit {
             () => console.log('completed!')
         )
   }
+  */
 }

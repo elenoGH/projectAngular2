@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UsuariosComponent } from './usuarios/usuarios.component';
+import { UsuariosComponent } from './usuarios/listar/usuarios.component';
 
-import { FormsModule } from '@angular/forms';
-import { UsuarioDetalleComponent } from './usuario-detalle/usuario-detalle.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UsuarioDetalleComponent } from './usuarios/usuario-detalle/usuario-detalle.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; // <-- NgModel lives here
+import { DashboardComponent } from './usuarios/dashboard/dashboard.component'; // <-- NgModel lives here
 
 //servicios REST
 import { HttpClientModule }    from '@angular/common/http';
@@ -17,6 +17,9 @@ import { HttpClientModule }    from '@angular/common/http';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +27,16 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     UsuariosComponent,
     UsuarioDetalleComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginComponent,
+    HomeComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),

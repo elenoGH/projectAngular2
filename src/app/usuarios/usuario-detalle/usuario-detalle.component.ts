@@ -3,9 +3,9 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
-import { UsuarioService }  from '../usuario.service';
+import { UsuarioService }  from '../../_services';
 
-import { Usuario } from '../usuario'
+import { Usuario } from '../modelo/usuario'
 
 @Component({
   selector: 'app-usuario-detalle',

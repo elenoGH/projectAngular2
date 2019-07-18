@@ -1,0 +1,30 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th>CLAVE</th>
+        <th>USUARIO</th>
+        <th>NOMBRE</th>
+        <th>ESTATUS</th>
+        <th>ROL</th>
+        <th>ACCION</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarioslist_" class="text-center">
+        <td>{{usuario.ucveusu}}</td>
+        <td>{{usuario.unomusuario}}</td>
+        <td> {{usuario.unombre}}&nbsp;{{usuario.uapellidop}}</td>
+        <td>{{usuario.uestatus}}</td>
+        <td>{{usuario.ucverol.rnombre}}</td>
+        <td>
+            <a routerLink="/detalle/{{usuario.uidusuario}}">
+              <button class="btn btn-success pull-right" >Ver</button>
+            </a>&nbsp;
+            <!--<button class="btn btn-warning"
+            (click)="postThis(usuario)">ENVIAR MAIL</button>-->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
