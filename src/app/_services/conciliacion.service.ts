@@ -35,7 +35,7 @@ export class ConciliacionService {
 
     this.messageService.add('Correo Enviado');
 
-    return this.http.post<Conciliacion>(`http://localhost/crud/sendMail?name=${conciliacion.cemail}&secondname=${conciliacion.cemail}&appat=${conciliacion.cemail}&apmat=${conciliacion.cemail}&bancocuenta=${conciliacion.cemail}&bancosucursal=${conciliacion.cemail}&bancoclave=${conciliacion.cemail}&bancoreferencia=${conciliacion.cemail}&folio=${conciliacion.cemail}&casa=${conciliacion.cemail}&manzana=${conciliacion.cemail}&propietario=${conciliacion.cemail}&privada=${conciliacion.cemail}&email=${conciliacion.cemail}`
+    return this.http.post<Conciliacion>(`http://localhost/crud/sendMail?name=${conciliacion.cnomresidente}&secondname=&appat=&apmat=&bancocuenta=${conciliacion.ccveref}&bancosucursal=&bancoclave=${conciliacion.ccvestat}&bancoreferencia=${conciliacion.ccveref}&folio=&casa=&manzana=&propietario=${conciliacion.cnomresidente}&privada=&email=${conciliacion.cemail}`
     , conciliacion, options)
 
 
