@@ -14,8 +14,8 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let vivienda of viviendas_ | paginate: {itemsPerPage:10, currentPage:pageActual}">
-        <td>{{vivienda.vcvevivienda}}</td>
+      <tr *ngFor="let vivienda of viviendas_ | paginate: {itemsPerPage:7, currentPage:pageActual}">
+        <td scope="row">{{vivienda.vcvevivienda}}</td>
         <td>{{vivienda.vnombre}}</td>
         <td>{{vivienda.vcalle}}</td>
         <td>{{vivienda.vnumex}}</td>
