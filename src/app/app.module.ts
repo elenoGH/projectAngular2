@@ -20,7 +20,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { ListarComponent } from './residentes/listar/listar.component';
+import { ListarRecComponent } from './residentes/listar/listar.component';
+import { ListarConcComponent } from './conciliaciones/listar/listar.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ListarComponent } from './residentes/listar/listar.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    ListarComponent
+    ListarRecComponent,
+    ListarConcComponent
   ],
   imports: [
     BrowserModule,

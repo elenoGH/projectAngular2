@@ -1,0 +1,45 @@
+<!--<button class="btn btn-warning"
+  (click)="router.navigate(['/conciliacion']);">Conciliar</button>
+-->
+<!--<input type="file" [(ngModel)]="Model.datasourcelistdata" 
+  name="datasource_upload" id="datasource_upload" 
+  accept=".xlsx,.xls,.csv" ngf-max-size="20MB" 
+  fd-input (change)="uploadDatasource($event)" />-->
+  
+  <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr class="text-center">
+              <th>REFERENCIA</th>
+              <th>NOMBRE</th>
+              <th>CLAVE VIVIENDA</th>
+              <th>MONTO</th>
+              <th>ESTATUS</th>
+              <th>AÑO</th>
+              <th>MES</th>
+              <th>ESTATUS2</th>
+              <th>FECHA</th>
+              <th>EMAIL</th>
+              <th>ACCIONES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let conciliacion of listConciliaciones" class="text-center">
+              <td>{{conciliacion.ccveref}}</td>
+              <td>{{conciliacion.cnomresidente}}</td>
+              <td>{{conciliacion.ccveviv.vcvevivienda}}</td>
+              <td>{{conciliacion.cmonto}}</td>
+              <td>{{conciliacion.ccvestat}}</td>
+              <td>{{conciliacion.canio}}</td>
+              <td>{{conciliacion.cmespa}}</td>
+              <td>{{conciliacion.cvobo}}</td>
+              <td>{{conciliacion.cfecha}}</td>
+              <td>{{conciliacion.cemail}}</td>
+              <td>
+                  <button class="btn btn-warning"
+                  (click)="postThis(conciliacion)">ENVIAR MAIL</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
