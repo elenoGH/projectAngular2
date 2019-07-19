@@ -1,0 +1,18 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th>CLAVE</th>
+        <th>NOMBRE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let condominio of condominio_ | paginate: {itemsPerPage:10, currentPage:pageActual}">
+        <td>{{condominio.ccvecon}}</td>
+        <td>{{condominio.cnombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+    <pagination-controls (pageChange) = "pageActual = $event"> </pagination-controls>
+
+</div>

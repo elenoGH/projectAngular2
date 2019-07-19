@@ -22,15 +22,15 @@ export class UsuarioService {
     private http:HttpClient
     ) { }
 
-    
-  
-  uriAllItems='http://localhost/crud/getUsuarios';
+
+
+  uriAllItems='http://localhost:8080/crud/getUsuarios';
   getUsers(): Observable<Usuario[]> {
     //this.messageService.add('UsuarioService: listado de usuarios');
     //return of(USUARIOSLIST);
     return this.http.get<Usuario[]>(this.uriAllItems);
   }
-  
+
   //solo traemos un usuario detalle
   getUsuario(id: number): Observable<Usuario> {
     //this.messageService.add(`UsuarioService: fetched usuario id=${id}`);
@@ -39,18 +39,18 @@ export class UsuarioService {
   }
 /*
   postRequest(usuario: Usuario) : Observable<Usuario>{
-    
+
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
        });
     let options = { headers: headers };
-  
+
     this.messageService.add('Correo Enviado');
-    
+
     return this.http.post<Usuario>(`http://localhost/crud/sendMail?name=${usuario.name}&secondname=${usuario.secondname}&appat=${usuario.appat}&apmat=${usuario.apmat}&bancocuenta=${usuario.bancocuenta}&bancosucursal=${usuario.bancosucursal}&bancoclave=${usuario.bancoclave}&bancoreferencia=${usuario.bancoreferencia}&folio=${usuario.folio}&casa=${usuario.casa}&manzana=${usuario.manzana}&propietario=${usuario.propietario}&privada=${usuario.privada}&email=${usuario.email}`
     , usuario, options)
 
-    
+
   }
 */
   /***servicios para registro de usuario***/

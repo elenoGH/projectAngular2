@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import{NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,7 +22,9 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ListarComponent } from './residentes/listar/listar.component';
-
+import { CondominiosComponent } from './condominios/condominios.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { ViviendasComponent } from './viviendas/viviendas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +35,9 @@ import { ListarComponent } from './residentes/listar/listar.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    ListarComponent
+    ListarComponent,
+    CondominiosComponent,
+    ViviendasComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,10 @@ import { ListarComponent } from './residentes/listar/listar.component';
     HttpClientModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    NgbModule,
+    NgxPaginationModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

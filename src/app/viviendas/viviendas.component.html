@@ -1,0 +1,31 @@
+<div class="table-responsive">
+  <table class="table table-bordered">
+    <thead>
+      <tr class="text-center">
+        <th scope="col">CLAVE</th>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">CALLE</th>
+        <th scope="col">#EXTERIOR</th>
+        <th scope="col">#INTERIOR</th>
+        <th scope="col">MANZANA</th>
+        <th scope="col">LOTE</th>
+        <th scope="col">CONDOMINIO</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vivienda of viviendas_ | paginate: {itemsPerPage:10, currentPage:pageActual}">
+        <td>{{vivienda.vcvevivienda}}</td>
+        <td>{{vivienda.vnombre}}</td>
+        <td>{{vivienda.vcalle}}</td>
+        <td>{{vivienda.vnumex}}</td>
+        <td>{{vivienda.vnumint}}</td>
+        <td>{{vivienda.vmanzana}}</td>
+        <td>{{vivienda.vlote}}</td>
+        <td>{{vivienda.vcvecon.cnombre}}</td>
+      </tr>
+    </tbody>
+  </table>
+    <pagination-controls (pageChange) = "pageActual = $event"> </pagination-controls>
+
+</div>
