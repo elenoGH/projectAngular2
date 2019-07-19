@@ -26,6 +26,7 @@ export class ResidenteService {
     return this.http.get<Residente[]>(this.uriAllItems);
   }
 
+<<<<<<< HEAD
   postRequest(residente: Residente) : Observable<Residente>{
 
     let headers = new HttpHeaders({
@@ -41,4 +42,6 @@ export class ResidenteService {
 
   }
 
+=======
+>>>>>>> 21ec71f9a7349deb7f3ddfe7e1d15c6f2eb5f8a7
 }
