@@ -21,23 +21,23 @@ export class ConciliacionService {
     private http:HttpClient
   ) { }
 
-  uriAllItems='http://localhost/crud/getConciliacion';
+  uriAllItems='http://localhost:8080/crud/getConciliacion';
   getConciliaciones(): Observable<Conciliacion[]> {
     return this.http.get<Conciliacion[]>(this.uriAllItems);
   }
 
   postRequest(conciliacion: Conciliacion) : Observable<Conciliacion>{
-    
+
     let headers = new HttpHeaders({
       'Content-Type': 'application/json',
        });
     let options = { headers: headers };
-  
+
     this.messageService.add('Correo Enviado');
-    
+
     return this.http.post<Conciliacion>(`http://localhost/crud/sendMail?name=${conciliacion.cemail}&secondname=${conciliacion.cemail}&appat=${conciliacion.cemail}&apmat=${conciliacion.cemail}&bancocuenta=${conciliacion.cemail}&bancosucursal=${conciliacion.cemail}&bancoclave=${conciliacion.cemail}&bancoreferencia=${conciliacion.cemail}&folio=${conciliacion.cemail}&casa=${conciliacion.cemail}&manzana=${conciliacion.cemail}&propietario=${conciliacion.cemail}&privada=${conciliacion.cemail}&email=${conciliacion.cemail}`
     , conciliacion, options)
 
-    
+
   }
 }

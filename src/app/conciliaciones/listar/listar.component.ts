@@ -12,6 +12,7 @@ import { ConciliacionService } from '../../_services/conciliacion.service';
 export class ListarConcComponent implements OnInit {
 
   listConciliaciones: Conciliacion[];
+  pageActual:number=1;
 
   constructor(private conciliacionService: ConciliacionService) { }
 

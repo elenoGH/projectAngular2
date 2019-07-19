@@ -21,16 +21,15 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-<<<<<<< HEAD
-import { ListarComponent } from './residentes/listar/listar.component';
+
 import { CondominiosComponent } from './condominios/condominios.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { ViviendasComponent } from './viviendas/viviendas.component';
-=======
+
 import { ListarRecComponent } from './residentes/listar/listar.component';
 import { ListarConcComponent } from './conciliaciones/listar/listar.component';
 
->>>>>>> 21ec71f9a7349deb7f3ddfe7e1d15c6f2eb5f8a7
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,14 +40,12 @@ import { ListarConcComponent } from './conciliaciones/listar/listar.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-<<<<<<< HEAD
-    ListarComponent,
     CondominiosComponent,
-    ViviendasComponent
-=======
+    ViviendasComponent,
+
     ListarRecComponent,
     ListarConcComponent
->>>>>>> 21ec71f9a7349deb7f3ddfe7e1d15c6f2eb5f8a7
+
   ],
   imports: [
     BrowserModule,
