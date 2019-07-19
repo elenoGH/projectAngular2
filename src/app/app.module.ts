@@ -28,6 +28,8 @@ import { ViviendasComponent } from './viviendas/viviendas.component';
 
 import { ListarRecComponent } from './residentes/listar/listar.component';
 import { ListarConcComponent } from './conciliaciones/listar/listar.component';
+import {FooterComponent} from './footer/footer.component';
+
 
 
 @NgModule({
@@ -44,7 +46,9 @@ import { ListarConcComponent } from './conciliaciones/listar/listar.component';
     ViviendasComponent,
 
     ListarRecComponent,
-    ListarConcComponent
+    ListarConcComponent,
+    FooterComponent
+
 
   ],
   imports: [
