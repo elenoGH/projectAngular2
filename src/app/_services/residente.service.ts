@@ -21,7 +21,7 @@ export class ResidenteService {
     private http:HttpClient
   ) { }
 
-  uriAllItems='http://localhost:8080/crud/getResidentes';
+  uriAllItems='http://localhost/crud/getResidentes';
   getResidentes(): Observable<Residente[]> {
     return this.http.get<Residente[]>(this.uriAllItems);
   }

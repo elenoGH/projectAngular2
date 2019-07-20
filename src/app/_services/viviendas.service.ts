@@ -21,7 +21,7 @@ export class ViviendasService
     private http:HttpClient
   ){}
 
-  uriAllItems='http://localhost:8080/crud/getViviendas';
+  uriAllItems='http://localhost/crud/getViviendas';
   getViviendas(): Observable<Viviendas[]>{
     return this.http.get<Viviendas[]>(this.uriAllItems);
   }

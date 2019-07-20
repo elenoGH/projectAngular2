@@ -21,7 +21,7 @@ export class CondominioService
     private http:HttpClient
   ){}
 
-  uriAllItems='http://localhost:8080/crud/getCondominios';
+  uriAllItems='http://localhost/crud/getCondominios';
   getCondominio(): Observable<Condominio[]>{
     return this.http.get<Condominio[]>(this.uriAllItems);
   }

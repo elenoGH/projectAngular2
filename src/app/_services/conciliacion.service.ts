@@ -3,7 +3,7 @@ import { Conciliacion } from '../conciliaciones/modelo/conciliaciones';
 
 import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders , HttpRequest, HttpEvent} from '@angular/common/http';
 import { map, catchError } from "rxjs/operators";
 import 'rxjs/add/operator/map';
 
@@ -21,7 +21,7 @@ export class ConciliacionService {
     private http:HttpClient
   ) { }
 
-  uriAllItems='http://localhost:8080/crud/getConciliacion';
+  uriAllItems='http://localhost/crud/getConciliacion';
   getConciliaciones(): Observable<Conciliacion[]> {
     return this.http.get<Conciliacion[]>(this.uriAllItems);
   }
@@ -40,4 +40,23 @@ export class ConciliacionService {
 
 
   }
+
+  //upload files service
+  pushFileToStorage(file: File): Observable<HttpEvent<{}>> {
+    let formdata: FormData = new FormData();
+ 
+    formdata.append('file', file);
+ 
+    const req = new HttpRequest('POST', 'http://localhost/crud/postFileUpload', formdata, {
+      reportProgress: true,
+      responseType: 'text'
+    });
+ 
+    return this.http.request(req);
+  }
+ 
+  getFiles(): Observable<string[]> {
+    return this.http.get<string[]>('/getallfiles');
+  }
+
 }

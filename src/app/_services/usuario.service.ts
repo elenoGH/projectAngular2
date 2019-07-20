@@ -24,7 +24,7 @@ export class UsuarioService {
 
 
 
-  uriAllItems='http://localhost:8080/crud/getUsuarios';
+  uriAllItems='http://localhost/crud/getUsuarios';
   getUsers(): Observable<Usuario[]> {
     //this.messageService.add('UsuarioService: listado de usuarios');
     //return of(USUARIOSLIST);
