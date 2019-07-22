@@ -59,4 +59,33 @@ export class ConciliacionService {
     return this.http.get<string[]>('/getallfiles');
   }
 
+  //subir datos del archivo que se subio previamente, este archivo ya se devera encontrar
+  //del lado del servidor
+  subirDatosFile() : Observable<string[]>{
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+       });
+    let options = { headers: headers };
+
+    this.messageService.add('Subimos Datos del archivo.');
+
+    return this.http.post<string[]>(`http://localhost/crud/loadFile?jobParameter=1011`, {}, options)
+
+  }
+
+  //checar bien el eliminar el archivo
+  eliminarArchivoSubido() : Observable<string[]>{
+
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+       });
+    let options = { headers: headers };
+
+    this.messageService.add('Eliminar Archivo Subido11.');
+
+    return this.http.post<string[]>(`http://localhost/crud/deleteFiles`, {}, options)
+
+  }
+
 }

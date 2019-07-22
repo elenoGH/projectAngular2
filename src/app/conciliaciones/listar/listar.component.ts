@@ -64,7 +64,13 @@ export class ListarConcComponent implements OnInit {
       if (event.type === HttpEventType.UploadProgress) {
         this.progress.percentage = Math.round(100 * event.loaded / event.total);
       } else if (event instanceof HttpResponse) {
-        console.log('File is completely uploaded!');
+        this.conciliacionService.subirDatosFile()
+        .subscribe(
+            data => console.log('se subieron los datos del archivo'),
+            error => console.log('ocurrio un error'),
+            () => console.log('completed file update data to DB!')
+        )
+        console.log('Se subio el archivo 1 OKOK!');
       }
     })
  
