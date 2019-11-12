@@ -35,6 +35,7 @@ export class ListarConcComponent implements OnInit {
     this.conciliacionService.getConciliaciones().subscribe(listCon => this.listConciliaciones = listCon);
   }
 
+  //accion para envio de correo
   postThis(data) {
     this.conciliacionService.postRequest(data)
         .subscribe(

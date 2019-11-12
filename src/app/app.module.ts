@@ -29,6 +29,8 @@ import { ViviendasComponent } from './viviendas/viviendas.component';
 import { ListarRecComponent } from './residentes/listar/listar.component';
 import { ListarConcComponent } from './conciliaciones/listar/listar.component';
 import {FooterComponent} from './footer/footer.component';
+//codigos postales de mexico
+import { CpmlistarComponent } from './cpmex/cpmlistar/cpmlistar.component';
 
 
 
@@ -47,7 +49,8 @@ import {FooterComponent} from './footer/footer.component';
 
     ListarRecComponent,
     ListarConcComponent,
-    FooterComponent
+    FooterComponent,
+    CpmlistarComponent
 
 
   ],

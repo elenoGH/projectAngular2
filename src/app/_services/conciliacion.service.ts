@@ -45,9 +45,9 @@ export class ConciliacionService {
   pushFileToStorage(file: File): Observable<HttpEvent<{}>> {
     let formdata: FormData = new FormData();
  
-    formdata.append('file', file);
+    formdata.append('archivo_', file);
  
-    const req = new HttpRequest('POST', 'http://localhost/crud/postFileUpload', formdata, {
+    const req = new HttpRequest('POST', 'http://localhost/crud/subirArchivoServidorController', formdata, {
       reportProgress: true,
       responseType: 'text'
     });
@@ -59,7 +59,7 @@ export class ConciliacionService {
     return this.http.get<string[]>('/getallfiles');
   }
 
-  //subir datos del archivo que se subio previamente, este archivo ya se devera encontrar
+  //subir datos del archivo que se subio previamente a la BD, este archivo ya se devera encontrar
   //del lado del servidor
   subirDatosFile() : Observable<string[]>{
 
